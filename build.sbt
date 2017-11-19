@@ -26,6 +26,11 @@ publishTo := {
     Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
+(sys.env.get("ossrhUsername"), sys.env.get("ossrhPassword")) match {
+  case (Some(username), Some(password)) => credentials += Credentials("Sonatype Nexus Repository Manager", "oss.sonatype.org", username, password)
+  case (_, _) => credentials ++= Seq()
+}
+
 pomExtra :=
   <developers>
     <developer>
