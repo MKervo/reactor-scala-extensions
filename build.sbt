@@ -10,7 +10,7 @@ fork := true
 
 crossScalaVersions := Seq("2.12.4", "2.11.11")
 
-libraryDependencies += "io.projectreactor" % "reactor-core" % "3.1.1.RELEASE"
+libraryDependencies += "io.projectreactor" % "reactor-core" % "3.1.2.RELEASE"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 libraryDependencies += "io.projectreactor" % "reactor-test" % "3.1.1.RELEASE" % "test"
